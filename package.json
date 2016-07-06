@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "Enables sharing things",
   "main": "server.js",
-  "author": "blanchg",
+  "private": true,
+  "author": "Glen Blanchard <blanchard.glen@gmail.com>",
+  "bugs": "https://github.com/blanchg/slotmein/issues",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "blanchg/slotmein.git"
+  },
   "dependencies": {
     "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
