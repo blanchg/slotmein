@@ -1,0 +1,24 @@
+{
+  "name": "slotmein",
+  "version": "1.0.0",
+  "description": "Enables sharing things",
+  "main": "server.js",
+  "author": "blanchg",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "browserify-middleware": "^7.0.0",
+    "express": "^4.14.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run extern && npm run app",
+    "extern": "browserify --debug --plugin [minifyify --map extern.js.map --output build/extern.js.map] -r react -r react-dom -o build/extern.js",
+    "app": "browserify -t [ babelify --presets [ react ] ] -x react -x react-dom src/index.js -o build/app.js",
+    "start": "node server.js"
+  }
+}
